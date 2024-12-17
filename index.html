@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./icon.png" type="image/png" sizes="32x32" />
+    <link
+      rel="apple-touch-icon"
+      href="./icon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
+    <script src="scripts/match-game.js" defer></script>
+    <script src="scripts/prevent.js" defer></script>
+    <script src="scripts/mobileScreen.js" defer></script>
+  </head>
+  <body>
+    <noscript class="">
+      <h3 class="">:)</h3>
+      <p class="">Please active your javascript</p>
+    </noscript>
+
+    <div class="gamepanel">
+      <div class="">
+        <h1 class="title" onclick="resetGame()">Match Game</h1>
+
+        <div class="score-container">
+          <span id="step" class="hidden">--</span>
+	  <span class="cup-img ">
+	    <img alt="cup" src="./assets/images/cup.png">
+	  </span>
+          <span id="score" class="">--</span>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="">
+      <div class="gameboard">
+        <div id="cardContainer" class="card-container"></div>
+      </div>
+
+      <div id="finish" class="finish">
+        <button id="resetButton" class="" onclick="resetGame()">
+          recommencer
+        </button>
+      </div>
+
+      <div class="footer">
+        <span class="">par Christ-Offert @2024</span>
+      </div>
+    </main>
+  </body>
+</html>
