@@ -24,7 +24,7 @@ function afficherImages() {
 
     // Facultatif : définir un attribut alt pour l'accessibilité
     img.alt = `Image ${i}`;
-    img.class = `scale-none`;
+    img.classList.add(`scale-none`);
 
     // Ajoute l'image dans le body
     document.body.appendChild(img);
