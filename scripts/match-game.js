@@ -125,7 +125,7 @@ const unshowCards = () => {
   const timer = setTimeout(() => {
     for (let index = 0; index < images.length; index++) {
       const image = images[index];
-      // image.remove();
+      image.remove();
     }
     clearTimeout(timer);
   }, globalAnimationDuration);
@@ -169,15 +169,15 @@ const createCard = (children, key) => {
   verso.classList.add("verso");
 
   card.appendChild(verso);
-
-  // ^ GENERER L'IMAGE
-  const img = document.createElement("img");
-  img.classList.add("image");
-  img.src = "./assets/images/" + dataImage[parseInt(children) - 1];
-  recto.appendChild(img);
   
   card.onclick = () => {
     if (!canClick) return;
+
+    // ^ GENERER L'IMAGE
+    const img = document.createElement("img");
+    img.classList.add("image");
+    img.src = "./assets/images/" + dataImage[parseInt(children) - 1];
+    recto.appendChild(img);
 
     makeMove();
     card.classList.add("show");
