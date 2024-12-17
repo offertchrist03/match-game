@@ -20,7 +20,7 @@ function afficherImages() {
     let img = document.createElement('img');
 
     // Définit l'attribut src pour l'image (par exemple, 'image1.jpg', 'image2.jpg', etc.)
-    img.src = `{i}.jpg`;  // Remplacez ceci par le chemin correct de vos images
+    img.src = `./assets/images/${i}.jpg`;  // Remplacez ceci par le chemin correct de vos images
 
     // Facultatif : définir un attribut alt pour l'accessibilité
     img.alt = `Image ${i}`;
