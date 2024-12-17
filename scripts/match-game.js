@@ -12,6 +12,27 @@ const dataImage = [
   "7.jpg",
   "8.jpg",
 ];
+
+// PRE-AFFICHE LES IMAGES
+function afficherImages() {
+  for (let i = 1; i <= 8; i++) {
+    // Crée un élément <img>
+    let img = document.createElement('img');
+
+    // Définit l'attribut src pour l'image (par exemple, 'image1.jpg', 'image2.jpg', etc.)
+    img.src = `{i}.jpg`;  // Remplacez ceci par le chemin correct de vos images
+
+    // Facultatif : définir un attribut alt pour l'accessibilité
+    img.alt = `Image ${i}`;
+    img.class = `scale-none`;
+
+    // Ajoute l'image dans le body
+    document.body.appendChild(img);
+  }
+}
+// Appeler la fonction pour afficher les images
+afficherImages();
+
 const dataCards = dataImage.map((img)=> img.replace(".jpg",""));
 
 const configs = { dataCards, cardCol: 4, cardSize: 58 };
